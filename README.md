@@ -51,3 +51,43 @@ Follow these steps to run the project locally:
 ```bash
 git clone https://github.com/PiyushCodess/TravelBuddy.git
 cd TravelBuddy
+
+
+2️⃣ Create and activate a virtual environment
+python -m venv venv
+venv\Scripts\activate  # For Windows
+# source venv/bin/activate  # For Linux/Mac
+
+3️⃣ Install dependencies
+pip install -r requirements.txt
+
+4️⃣ Create a .env file in the root directory
+GROQ_API_KEY=your_groq_or_gemini_api_key_here
+
+5️⃣ Run database migrations
+python manage.py migrate
+
+6️⃣ Run the Django development server
+python manage.py runserver
+
+
+Then open: 👉 http://127.0.0.1:8000/
+
+☁️ Deployment (Render)
+
+To deploy on Render:
+
+Push your project to GitHub (make sure .env is added to .gitignore)
+
+Create a new Web Service on Render.com
+
+Set Environment Variables:
+
+GROQ_API_KEY=your_actual_key
+
+
+Add build & start commands:
+
+Build Command: ./build.sh
+
+Start Command: gunicorn AITripPlanner.wsgi:application
