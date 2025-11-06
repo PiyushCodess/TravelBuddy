@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -197,10 +198,21 @@
     </style>
 </head>
 <body>
-    <div class="header text-center">
-        <h1>My Trip</h1>
-        <p class="lead">Plan your perfect getaway</p>
+    <div style="background: linear-gradient(to right, #6a11cb, #2575fc); padding: 20px; display: flex; align-items: center; justify-content: space-between; border-radius: 10px;">
+    
+    <!-- Logo + TravelBuddy text (left side) -->
+        <a href="{% url 'home' %}" style="text-decoration: none; display: flex; align-items: center;">
+            <span style="font-size: 24px; font-weight: bold; color: white;">TravelBuddy</span>
+        </a>
+
+    <!-- My Trip Title (right side) -->
+        <div style="text-align: right; color: white;">
+            <h1 style="margin: 0;">My Trip</h1>
+            <p style="margin: 0;">Plan your perfect getaway</p>
+        </div>
     </div>
+
+
 
     <div class="container" style=" max-width: 800px;">
         <!-- Welcome Screen -->
@@ -362,6 +374,7 @@
         <button id="activities-next-btn" class="btn btn-primary mt-4">Create Trip</button>
     </div>
 </div>
+
 
 <!-- Trip Result -->
 <div id="trip-result-container" class="step-container">
