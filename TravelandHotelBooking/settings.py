@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-df*&(=0zo*^h3r@5i7e9*e8w35%+yapf2k6hqnlu2+((hh^!f0")
+SECRET_KEY = 'django-insecure-df*&(=0zo*^h3r@5i7e9*e8w35%+yapf2k6hqnlu2+((hh^!f0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -120,10 +120,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-RAZORPAY_KEY_ID = os.environ.get("RAZORPAY_KEY_ID")
-RAZORPAY_KEY_SECRET = os.environ.get("RAZORPAY_KEY_SECRET")
+RAZORPAY_KEY_ID = "rzp_test_tPhc333asPKtv6"
+RAZORPAY_KEY_SECRET = "UVSxUflxDlLM9dgEHGBxVok2"
 # Groq API Configuration
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "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"
 GROQ_MODEL_NAME = "meta-llama/llama-4-scout-17b-16e-instruct"
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 # }
