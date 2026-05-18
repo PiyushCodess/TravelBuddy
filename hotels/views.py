@@ -3,9 +3,11 @@ from .models import Place, Hotel, SavedTrip
 import folium
 import sys, types
 if 'pkg_resources' not in sys.modules:
-    sys.modules['pkg_resources'] = types.ModuleType('pkg_resources')
-    sys.modules['pkg_resources'].get_distribution = lambda x: type('D',(),{'version':'0'})()
-
+    _pkg = types.ModuleType('pkg_resources')
+    _pkg.get_distribution = lambda x: type('D',(),{'version':'0'})()
+    _pkg.DistributionNotFound = Exception
+    _pkg.require = lambda x: None
+    sys.modules['pkg_resources'] = _pkg
 import razorpay
 from django.conf import settings
 from django.shortcuts import render, get_object_or_404
@@ -296,4 +298,5 @@ def transportation_near_place(request, place_id):
         'map_html': map_html,
         'transportation_types': transportation_types
     })
+
 
