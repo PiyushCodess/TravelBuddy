@@ -123,7 +123,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 RAZORPAY_KEY_ID = "rzp_test_tPhc333asPKtv6"
 RAZORPAY_KEY_SECRET = "UVSxUflxDlLM9dgEHGBxVok2"
 # Groq API Configuration
-GROQ_API_KEY = "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"
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 GROQ_MODEL_NAME = "meta-llama/llama-4-scout-17b-16e-instruct"
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 # }
