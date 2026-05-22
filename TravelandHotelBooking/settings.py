@@ -124,7 +124,7 @@ RAZORPAY_KEY_ID = "rzp_test_tPhc333asPKtv6"
 RAZORPAY_KEY_SECRET = "UVSxUflxDlLM9dgEHGBxVok2"
 # Groq API Configuration
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
-GROQ_MODEL_NAME = "llama3-8b-8192"
+GROQ_MODEL_NAME = "llama-3.1-8b-instant"
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 # }
 
